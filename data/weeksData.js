@@ -140,7 +140,7 @@ export const weeksData = [
 },
 
   {
-    label: "01/08/2025-07/08/2025",
+    label: "01-07/08/2025",
     financeiro: {
       ticketMedio: 227.21,
       pedidosPagosTotais: 553,
@@ -211,102 +211,5 @@ export const weeksData = [
                   mofuBofuUpados:0, mofuBofuEstatico:0, mofuBofuVideo:0, mofuBofuValidados:0, mofuBofuNaoValidados:0 }
     }
   },
-
-
-  {
-  label: "Semana passada",
-  financeiro: {
-    ticketMedio: 237.65,
-    pedidosPagosTotais: 384,
-    faturamento: 89617.62,
-    lucro: -8804.18,
-    roiPercent: 205.1,
-    margemPercent: -9.82,
-    pedidosPorCanal: {
-      yampiNovos: 255,
-      yampiRecorrentes: 78,
-      dmg: 26,
-      mercadolivre: 25,
-      shopee: 0,
-      amazon: 0,
-      tiktokShops: 0
-    },
-    gastosAnuncios: {
-      meta: 30173.51,
-      google: 13792.00,
-      tiktok: 0,
-      mlAds: 587.29
-    },
-    conversao: {
-      checkoutYampi: 67.37,
-      pixYampi: 91.0
-    },
-    atribuicaoVendasPercent: {
-      socialMedia: 15.03,
-      salesArmy: 6.13,
-      organico: 3.37,
-      email: 0.00,
-      metaAds: 44.79,
-      googleAds: 15.03,
-      mercadolivre: 7.67,
-      shopee: 0.00,
-      amazon: 0.00,
-      tiktokShops: 0.00,
-      tiktokAds: 0.00,
-      indproduct: 0.00,
-      judgeMe: 0.00,
-      meuGuru: 7.98
-    },
-    naoLocalizadoPercent: 17.79
-  },
-  scripts: {
-    allInGreens: { escritos: 1, aprovados: 1, comReferencia: 1 },
-    naturalFire: { escritos: 4, aprovados: 4, comReferencia: 4 },
-    extratos: { escritos: 0, aprovados: 0, comReferencia: 0 },
-    total: { escritos: 5, aprovados: 5, comReferencia: 5 }
-  },
-  conteudo: {
-    enviosMural: 0,
-    enviosNovosCriadores: 5,
-    escoadosEntregues: 3,
-    escoadosPendentes: 11,
-    escoadosAguardandoAprovacao: 0,
-    primeiraEntregaEntregues: 0,
-    primeiraEntregaPendentes: 0,
-    primeiraEntregaAguardandoAprovacao: 0,
-    prontosParaEscoarNaoEscoados: 8,
-    metaReceptivas: 12,
-    metaAtivas: 1,
-    semEsteira: 0,
-    youtube: 0,
-    prospeccoesAtivas: 50,
-    orcamentosBigInflus: 2,
-    contratosFechados: 0,
-    criadoresSemMaterial: 19,
-    vendasComCupom: 57,
-    faturamentoComCupom: 12789.29
-  },
-  edicao: {
-    escoadosEditados: 7,
-    escoadosPendentesEdicao: 5,
-    estaticosProntos: 3,
-    estaticosAguardandoRev: 3,
-    carrosseisProntos: 0,
-    carrosseisAguardandoRev: 0
-  },
-  metaAds: {
-    total:         { tofuUpados: 4, tofuEstatico: 0, tofuVideo: 4, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    allInGreens:   { tofuUpados: 3, tofuEstatico: 0, tofuVideo: 3, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    naturalFire:   { tofuUpados: 1, tofuEstatico: 0, tofuVideo: 1, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    extratos:      { tofuUpados: 0, tofuEstatico: 0, tofuVideo: 0, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 }
-  },
-  googleAds: {
-    total:         { tofuUpados: 0, tofuEstatico: 0, tofuVideo: 0, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    allInGreens:   { tofuUpados: 0, tofuEstatico: 0, tofuVideo: 0, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    naturalFire:   { tofuUpados: 0, tofuEstatico: 0, tofuVideo: 0, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 },
-    extratos:      { tofuUpados: 0, tofuEstatico: 0, tofuVideo: 0, tofuValidados: 0, tofuNaoValidados: 0, mofuBofuUpados: 0, mofuBofuEstatico: 0, mofuBofuVideo: 0, mofuBofuValidados: 0, mofuBofuNaoValidados: 0 }
-  }
-}
-
 
 ];
