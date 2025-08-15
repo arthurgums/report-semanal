@@ -1,0 +1,118 @@
+:root{
+  --bg: #0b0d10;
+  --card: #11151a;
+  --muted: #9aa4af;
+  --text: #e7edf3;
+  --brand: #00C978;
+  --brand-2: #4DD3FF;
+  --danger: #ff6b6b;
+  --warn: #ffb84d;
+  --ok: #00e091;
+  --shadow: 0 12px 32px rgba(0,0,0,.25);
+  --radius: 20px;
+  --radius-sm: 12px;
+}
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg: #f6f8fb;
+    --card: #ffffff;
+    --muted: #5b6570;
+    --text: #1f2937;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+  }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  background: var(--bg); color: var(--text);
+}
+header{
+  position: sticky; top:0; z-index:10; backdrop-filter: blur(8px);
+  background: color-mix(in lab, var(--bg) 85%, transparent);
+  border-bottom: 1px solid color-mix(in lab, var(--text) 10%, transparent);
+}
+.wrap{max-width:1200px; margin:0 auto; padding: 18px 16px;}
+.titlebar{display:flex; align-items:center; gap:12px; justify-content:space-between}
+.titlebar h1{margin:0; font-size:20px; letter-spacing:.2px}
+.actions{display:flex; gap:8px; align-items:center}
+.tabs{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
+
+.btn, .tab-btn{
+  border:1px solid color-mix(in lab, var(--text) 20%, transparent);
+  background: var(--card); color: var(--text);
+  padding:10px 14px; border-radius: 999px; cursor:pointer;
+  transition:.2s transform, .2s background; font-weight:600;
+}
+.btn[aria-pressed="true"], .tab-btn[aria-selected="true"]{
+  background: var(--brand); color:#0b0d10; border-color: transparent;
+}
+
+/* =========== NOVO LAYOUT EM CARDS POR CATEGORIA =========== */
+.cat-card{
+  margin-top:16px;
+  background:
+    radial-gradient(1200px 200px at 0% 0%, color-mix(in lab, var(--brand) 8%, transparent), transparent),
+    var(--card);
+  border:1px solid color-mix(in lab, var(--text) 14%, transparent);
+  border-left:4px solid color-mix(in lab, var(--brand) 70%, var(--brand));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding:16px;
+}
+.cat-title{display:flex; align-items:center; gap:10px; margin-bottom:12px}
+.cat-title .ico{font-size:22px}
+.cat-title h2{margin:0; font-size:20px}
+
+.kpi-tiles{
+  display:grid; gap:14px;
+  grid-template-columns: repeat(5, minmax(0,1fr));
+}
+.tile{
+  background:
+    linear-gradient(180deg, color-mix(in lab, var(--text) 6%, transparent), transparent 60%),
+    color-mix(in lab, var(--card) 82%, var(--text) 3%);
+  border:1px solid color-mix(in lab, var(--text) 12%, transparent);
+  border-radius: 16px; padding:16px; text-align:center;
+}
+.tile .value{font-size:26px; font-weight:800; line-height:1.1}
+.tile .label{font-size:12px; text-transform:uppercase; letter-spacing:.6px; color: var(--muted); margin-top:6px}
+.badge{
+  display:inline-block; margin-top:8px; padding:4px 8px; border-radius:999px; font-size:11px; font-weight:700;
+  background: color-mix(in lab, var(--text) 8%, transparent); color: var(--muted);
+}
+.t-good .value{ color: var(--ok); }
+.t-warn .value{ color: var(--warn); }
+.t-bad  .value{ color: var(--danger); }
+.badge.good{ background: color-mix(in lab, var(--ok) 25%, transparent); color: var(--ok)}
+.badge.warn{ background: color-mix(in lab, var(--warn) 25%, transparent); color: var(--warn)}
+.badge.bad { background: color-mix(in lab, var(--danger) 25%, transparent); color: var(--danger)}
+
+/* detalhes e tabelas (mantidos) */
+details{ margin-top:12px; }
+details > summary{
+  cursor:pointer; list-style:none; padding:8px 10px; border-radius:10px;
+  background: color-mix(in lab, var(--text) 8%, transparent);
+  font-weight:600;
+}
+details[open] > summary{ background: color-mix(in lab, var(--text) 12%, transparent); }
+
+table{width:100%; border-collapse: collapse; font-size:14px; margin-top:8px}
+th, td{padding:10px 8px; border-bottom:1px solid color-mix(in lab, var(--text) 10%, transparent)}
+th{text-align:left; color: var(--muted); font-weight:600}
+
+.muted{color: var(--muted)}
+.small{font-size:12px}
+.footnote{font-size:12px; color: var(--muted); margin-top:8px}
+
+/* charts group */
+.grid{ display:grid; gap:16px; margin-top:16px; grid-template-columns: repeat(12, 1fr); }
+.charts-card .card{ grid-column: span 12; }
+
+/* Simple vs Detailed */
+body[data-mode="simple"] details{ display:none; }
+body[data-mode="simple"] .charts-card{ display:none; }
+
+/* responsivo */
+@media (max-width: 1100px){ .kpi-tiles{ grid-template-columns: repeat(4,1fr);} }
+@media (max-width: 900px){  .kpi-tiles{ grid-template-columns: repeat(3,1fr);} }
+@media (max-width: 640px){  .kpi-tiles{ grid-template-columns: repeat(2,1fr);} }

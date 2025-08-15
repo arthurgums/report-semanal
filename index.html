@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Relatório Semanal • BrainJuice</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="css/theme.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body data-mode="simple">
+  <header>
+    <div class="wrap">
+      <div class="titlebar">
+        <h1>Relatório Semanal • BrainJuice</h1>
+        <div class="actions">
+          <button id="toggleModo" class="btn" aria-pressed="false" title="Alternar entre visão simples e detalhada">Modo detalhado</button>
+          <span class="btn" style="pointer-events:none" id="activeLabel">Semana</span>
+        </div>
+      </div>
+      <nav class="tabs" id="tabs"></nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="app">
+    <!-- As seções são renderizadas via JS -->
+    <p class="footnote">Dica: no GitHub Pages, suba este arquivo como <b>index.html</b> e ative em <i>Settings → Pages</i>.</p>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
